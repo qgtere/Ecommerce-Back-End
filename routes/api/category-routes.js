@@ -1,14 +1,12 @@
 const router = require('express').Router();
 const { Category, Product, ProductTag } = require('../../models');
 
-// The `/api/categories` endpoint
 
 router.get('/', async (req, res) => {
   // find all categories
-  // be sure to include its associated Products
+  // include its associated Products
   try {
     const categoriesData = await Category.findAll({
-      // Add Book as a second model to JOIN with
       include: { model: Product }
     });
     if (!categoriesData) {
@@ -24,7 +22,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   // find one category by its `id` value
-  // be sure to include its associated Products
+  // include its associated Products
   try {
     const CategoryData = await Category.findByPk(req.params.id, {
       include: { model: Product }
