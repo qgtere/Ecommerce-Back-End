@@ -45,7 +45,7 @@ Now you can start working:
 
 ## Link to the video
 
-[Link to the video](https://drive.google.com...)
+[Link to the video](https://drive.google.com/file/d/1PTbXSf7xOJlGszl3DdWkmr-5ZqajFkxh/view)
 
 ## Techs
 
